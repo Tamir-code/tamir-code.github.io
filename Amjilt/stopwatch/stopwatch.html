@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <title>stopwatch</title>
+    <meta charset="utf-8">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        button {
+            width: 200px;
+            height: 70px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #laps {
+            width: 38.1%;
+            height: 500px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            overflow: hidden;
+            overflow: scroll;
+        }
+        
+        .lapNumber {
+            width: 10%;
+            height: 50px;
+            background-color: yellow;
+            float: left;
+            border: 1px solid white;
+        }
+        
+        .lapTime {
+            width: 89%;
+            height: 50px;
+            float: left;
+            border: 1px solid white;
+        }
+        
+        .lap {
+            width: 100%;
+        }
+        
+        .back {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="stopwatch">Stop watch</p>
+        <div id="a">00:00:00</div>
+        <button onclick="run()">Start</button>
+        <button onclick="realFunction()">Reset</button>
+        <button onclick="lap()" disabled>Lap</button>
+        <div id="laps">
+
+        </div>
+    </div>
+    <script>
+        var dis = document.querySelectorAll("button")[2]
+
+        var i = 0
+        var q = 0
+        var w = 0
+        var ii
+        var qq
+        var ww
+        var a = document.getElementById("a")
+        var pause = true
+        var intervalid
+        var startstopbtn = document.querySelector("button")
+        var lapNum = 1
+        laps = document.getElementById("laps")
+
+        //var intervalId=setInterval(myFunction,10)
+        function myFunction() {
+            i++
+            if (i == 100) {
+                i = 0
+                q++
+
+            }
+            if (q == 60) {
+                q = 0
+                w++
+            }
+            a.innerHTML = ww + ":" + qq + ":" + ii
+            ii = i
+            qq = q
+            ww = w
+            if (q < 10) {
+                qq = "0" + q
+            }
+            if (w < 10) {
+                ww = "0" + w
+            }
+
+        }
+
+        function run() {
+            if (pause) {
+                intervalid = setInterval(myFunction, 10)
+                startstopbtn.innerHTML = "stop"
+                dis.disabled = false
+
+            } else {
+                clearInterval(intervalid)
+                startstopbtn.innerHTML = "start"
+                dis.disabled = true
+            }
+            pause = !pause
+        }
+
+        function realFunction() {
+            i = 0
+            q = 0
+            w = 0
+            lapNum = 1
+            laps.innerHTML = ''
+            a.innerHTML = "00:00:00"
+        }
+
+        function lap() {
+            var lapdiv = document.createElement("div")
+            lapdiv.className = "lap"
+            var lapNumber = document.createElement("div")
+            lapNumber.className = "lapNumber"
+            var lapTime = document.createElement("div")
+            lapTime.className = "lapTime"
+            lapdiv.append(lapNumber, lapTime)
+            laps.append(lapdiv)
+            console.log(lapdiv)
+            lapNumber.innerHTML = lapNum
+            lapTime.innerHTML = ww + ":" + qq + ":" + ii
+            lapNum++
+        }
+    </script>
+    <a class="back" href="file:///C:/Users/boldbaatar/Desktop/Amjilt/fullWeb/index.html">Page ruu butsah</a>
+
+</body>
+
+</html>

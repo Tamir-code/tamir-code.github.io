@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>homework</title>
+    <meta charset="utf-8">
+    <style>
+        .back {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="game(0)">Хайч</button>
+    <button onclick="game(1)">Чулуу</button>
+    <button onclick="game(2)">Даавуу</button>
+    <p id="vs">none</p>
+    <p>Bi:<span id="bi">0</span></p>
+    <p>Cpu:<span id="cpu">0</span></p>
+    <p>Tentsee:<span id="tentsee">0</span></p>
+    <script>
+        var cpuType
+        var bi = 0
+        var cpu = 0
+        var tentsee = 0
+        document.addEventListener("keydown", keyDownFunction)
+
+        function keyDownFunction(event) {
+            if (event.key == "q") {
+                game(0)
+
+            } else if (event.key == "w") {
+                game(2)
+            } else if (event.key == "e") {
+                game(1)
+            }
+        }
+
+        function game(type) {
+            cpuType = Math.floor(Math.random() * 3)
+            if (type == 0 && cpuType == 1) {
+                document.getElementById("vs").innerHTML = "Би: хайч   Cpu: чулуу гаргаж cpu ялав."
+            } else if (type == 0 && cpuType == 2) {
+                document.getElementById("vs").innerHTML = "Би: хайч   Cpu: даавуу гаргаж би ялав."
+            } else if (type == 1 && cpuType == 0) {
+                document.getElementById("vs").innerHTML = "Би: чулуу  Cpu: хайч гаргаж би ялав."
+            } else if (type == 1 && cpuType == 2) {
+                document.getElementById("vs").innerHTML = "Би: чулуу  Cpu: даавуу гаргаж cpu ялав."
+            } else if (type == 2 && cpuType == 0) {
+                document.getElementById("vs").innerHTML = "Би: даавуу Cpu: хайч гаргаж cpu ялав."
+            } else if (type == 2 && cpuType == 1) {
+                document.getElementById("vs").innerHTML = "Би: даавуу Cpu: чулуу гаргаж би ялав."
+            } else {
+                document.getElementById("vs").innerHTML = "Тэнцэв"
+            }
+            if (type == 0 && cpuType == 2 || type == 1 && cpuType == 0 || type == 2 && cpuType == 1) {
+                bi++
+            } else if (type == 0 && cpuType == 1 || type == 1 && cpuType == 2 || type == 2 && cpuType == 0) {
+                cpu++
+            } else {
+                tentsee++
+            }
+            document.getElementById("bi").innerHTML = bi
+            document.getElementById("cpu").innerHTML = cpu
+            document.getElementById("tentsee").innerHTML = tentsee
+        }
+    </script>
+    <a class="back" href="file:///C:/Users/boldbaatar/Desktop/Amjilt/fullWeb/index.html">Page ruu butsah</a>
+</body>
+
+</html>

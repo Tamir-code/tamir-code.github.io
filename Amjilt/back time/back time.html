@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>backtime</title>
+    <meta charset="utf-8">
+    <style>
+        .back {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <input>
+    <p>seconds</p>
+    <p id="a"></p>
+    <button onclick="setTime()">Set timer</button>
+    <script>
+        var input = document.querySelector("input")
+        var button = document.querySelector("button")
+        var p = document.querySelector("p")
+        var seconds = input.value
+        var minutes
+        var time
+        var intervalId
+        var a = document.getElementById("a")
+
+        function run() {
+            input.value--
+                a.innerHTML = input.value
+            button.style.visibility = "hidden"
+            input.style.visibility = "hidden"
+            p.style.visibility = "hidden"
+            if (input.value == 0) {
+                clearInterval(intervalId)
+                button.style.visibility = "visible"
+                input.style.visibility = "visible"
+                p.style.visibility = "visible"
+                a.style.visibility = "hidden"
+            }
+        }
+
+        function setTime() {
+            intervalId = setInterval(run, 1000)
+
+        }
+    </script>
+    <a class="back" href="file:///C:/Users/boldbaatar/Desktop/Amjilt/fullWeb/index.html">Page ruu butsah</a>
+
+</body>
+
+</html>

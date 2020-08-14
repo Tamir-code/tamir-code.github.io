@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>login</title>
+    <meta charset="utf-8">
+    <style>
+        #a1,
+        #a2,
+        #a3 {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            display: inline-block;
+            margin: 10px 10px;
+        }
+        
+        .back {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a1"></div>
+    <div id="a2"></div>
+    <div id="a3"></div>
+    <button onclick="myInput()">End darna uu</button>
+    <script>
+        var a1 = document.getElementById("a1")
+        var a2 = document.getElementById("a2")
+        var a3 = document.getElementById("a3")
+        var tooloh = 0
+
+        function myInput() {
+            if (tooloh == 0) {
+                document.getElementById("a1").style.visibility = "hidden"
+                document.getElementById("a2").style.visibility = "visible"
+                document.getElementById("a3").style.visibility = "visible"
+            } else if (tooloh == 1) {
+                document.getElementById("a2").style.visibility = "hidden"
+                document.getElementById("a1").style.visibility = "visible"
+                document.getElementById("a3").style.visibility = "visible"
+            } else if (tooloh == 2) {
+                document.getElementById("a3").style.visibility = "hidden"
+                document.getElementById("a2").style.visibility = "visible"
+                document.getElementById("a1").style.visibility = "visible"
+            } else if (tooloh == 3) {
+                document.getElementById("a1").style.visibility = "visible"
+                document.getElementById("a3").style.visibility = "visible"
+                document.getElementById("a2").style.visibility = "visible"
+            } else if (tooloh == 4) {
+                document.getElementById("a1").style.visibility = "hidden"
+                document.getElementById("a3").style.visibility = "hidden"
+                document.getElementById("a2").style.visibility = "hidden"
+            } else if (tooloh == 5) {
+                document.getElementById("a1").style.visibility = "visible"
+                document.getElementById("a3").style.visibility = "visible"
+                document.getElementById("a2").style.visibility = "visible"
+            } else {
+                tooloh = -1
+            }
+            tooloh++
+        }
+    </script>
+    <a class="back" href="file:///C:/Users/boldbaatar/Desktop/Amjilt/fullWeb/index.html">Page ruu butsah</a>
+
+</body>
+
+</html>
