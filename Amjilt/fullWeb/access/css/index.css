@@ -139,12 +139,12 @@ blockquote {
 
 /*-----Hobbi----*/
 
-#price {
+#hobbi {
     padding: 40px 0;
     background: #efefef;
 }
 
-#price h1 {
+#hobbi h1 {
     text-align: center;
     padding-bottom: 30px;
 }
@@ -255,4 +255,37 @@ a {
     background: #333;
     color: #fff;
     padding: 12px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+}
+
+.layer {
+    background-color: orange;
+    ;
+}
+
+.layer-1 {
+    flex: 1;
+}
+
+.layer-2 {
+    flex: 1;
+}
+
+.layer-3 {
+    flex: 1;
+}
+
+.layer-2 h1 {
+    text-align: center;
+    margin-top: 400px;
+    color: white;
 }
