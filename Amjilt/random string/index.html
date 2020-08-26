@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Random String</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        var somePeople = ["Specter", "DrowRanger", "Sven", "ShadowFiend", "WindRanger", "StormSprit", "Pangolier"]
+        var someWhere = ["mid lane", "bottom lane", "top lane", "roshan", "rune", "jungle", "secretShop"]
+        var someVerb = ["rampage", "doubleKill", "tripleKill", "feed", "muria", "5vs1", ]
+
+        var myPeople = somePeople[Math.floor(Math.random() * somePeople.length)]
+        var myWhere = someWhere[Math.floor(Math.random() * someWhere.length)]
+        var myVerb = someVerb[Math.floor(Math.random() * someVerb.length)]
+        var string = myPeople + "-ээр" + " " + myWhere + " " + "дээр" + " " + myVerb + " " + "хийв."
+        alert(string)
+    </script>
+</body>
+
+</html>

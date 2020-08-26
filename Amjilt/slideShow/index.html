@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Slide Show</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <img width="500px" height="500px" onclick="togglePause()" src="img/2.jpg">
+    <script>
+        var myImages = ["img/2.jpg", "img/3.jpg", "img/4.jpg"]
+        var images = document.querySelector("img")
+        var i = 1
+        var isPaused = false
+
+        function togglePause() {
+            if (!isPaused) {
+                clearInterval(intervalId)
+            } else {
+                intervalId = setInterval(myFunction, 1000)
+            }
+            isPaused = !isPaused
+            console.log(isPaused)
+        }
+
+        function myFunction() {
+            images.src = myImages[i]
+            i++
+            if (i == myImages.length) {
+                i = 0
+            }
+        }
+        var intervalId = setInterval(myFunction, 1000)
+    </script>
+</body>
+
+</html>
