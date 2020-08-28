@@ -61,27 +61,5 @@
 }
 
 .container {
-    margin-top: 400px;
-}
-
-
-/*------slider-----*/
-
-.container {
-    width: 800px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-#aa {
-    width: 800px;
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-}
-
-#aa img {
-    width: 800px;
-    height: 500px;
-    object-fit: cover;
+    margin-top: 300px;
 }

@@ -64,24 +64,50 @@
     margin-top: 400px;
 }
 
-
-/*------slider-----*/
-
 .container {
-    width: 800px;
-    overflow: hidden;
-    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#aa {
-    width: 800px;
-    margin: 0 auto;
-    display: flex;
-    position: relative;
+button {
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#aa img {
-    width: 800px;
+#laps {
+    width: 38.1%;
     height: 500px;
-    object-fit: cover;
+    background-color: aquamarine;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.lapNumber {
+    width: 10%;
+    height: 50px;
+    background-color: yellow;
+    float: left;
+    border: 1px solid white;
+}
+
+.lapTime {
+    width: 89%;
+    height: 50px;
+    float: left;
+    border: 1px solid white;
+}
+
+.lap {
+    width: 100%;
+}
+
+.back {
+    font-size: 40px;
 }
