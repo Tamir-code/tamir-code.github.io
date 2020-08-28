@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <style>
+        input {
+            width: 200px;
+            height: 50px;
+            font-size: 48px;
+        }
+        
+        button {
+            width: 45px;
+            height: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input></td>
+        </tr>
+        <tr>
+            <td><button onclick="myFunction(7)">7</button></td>
+            <td><button onclick="myFunction(8)">8</button></td>
+            <td><button onclick="myFunction(9)">9</button></td>
+            <td><button onclick="myFunction('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="myFunction(4)">4</button></td>
+            <td><button onclick="myFunction(5)">5</button></td>
+            <td><button onclick="myFunction(6)">6</button></td>
+            <td><button onclick="myFunction('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="myFunction(1)">1</button></td>
+            <td><button onclick="myFunction(2)">2</button></td>
+            <td><button onclick="myFunction(3)">3</button></td>
+            <td><button onclick="myFunction('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clean()">C</button></td>
+            <td><button onclick="myFunction(0)">0</button></td>
+            <td><button onclick="myFunction('/')">/</button></td>
+            <td><button onclick="equal()">=</button></td>
+        </tr>
+    </table>
+    <script>
+        function clean() {
+            var input = document.querySelector("input")
+            input.value = input.value.substring(0, input.value.length - 1)
+        }
+
+        function myFunction(arg) {
+            var input = document.querySelector("input")
+            input.value = input.value + arg
+        }
+
+        function equal() {
+            var input = document.querySelector("input")
+            input.value = eval(input.value)
+        }
+    </script>
+</body>
+
+</html>
