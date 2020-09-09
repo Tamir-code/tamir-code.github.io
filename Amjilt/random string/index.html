@@ -47,7 +47,8 @@
         </nav>
     </section>
     <div class="container">
-
+        <button onclick="start()">Random string</button>
+        <p></p>
     </div>
     <script>
         var somePeople = ["Specter", "DrowRanger", "Sven", "ShadowFiend", "WindRanger", "StormSprit", "Pangolier"]
@@ -58,7 +59,16 @@
         var myWhere = someWhere[Math.floor(Math.random() * someWhere.length)]
         var myVerb = someVerb[Math.floor(Math.random() * someVerb.length)]
         var string = myPeople + "-ээр" + " " + myWhere + " " + "дээр" + " " + myVerb + " " + "хийв."
-        alert(string)
+        var text = document.querySelector("p")
+        var button = document.querySelector("button")
+
+        function start() {
+            var myPeople = somePeople[Math.floor(Math.random() * somePeople.length)]
+            var myWhere = someWhere[Math.floor(Math.random() * someWhere.length)]
+            var myVerb = someVerb[Math.floor(Math.random() * someVerb.length)]
+            var string = myPeople + "-ээр" + " " + myWhere + " " + "дээр" + " " + myVerb + " " + "хийв."
+            text.innerHTML = string
+        }
     </script>
 </body>
 

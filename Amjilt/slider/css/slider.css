@@ -71,6 +71,7 @@
     width: 800px;
     overflow: hidden;
     margin: 0 auto;
+    transition: 1s;
 }
 
 #aa {

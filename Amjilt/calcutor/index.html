@@ -75,8 +75,22 @@
                 <td><button onclick="myFunction('/')">/</button></td>
                 <td><button onclick="equal()">=</button></td>
             </tr>
+            <tr>
+                <td><button onclick="cleaner()">AC</button></td>
+                <td><button onclick="myFunction('0'+'0')">00</button></td>
+                <td><button onclick="myFunction('0'+'0'+'0')">000</button></td>
+                <td><button onclick="myFunction('.')">.</button></td>
+            </tr>
         </table>
         <script>
+            var verbs = ["=", "+", "-", "0", "/", "*"]
+
+
+            function cleaner() {
+                var input = document.querySelector("input")
+                input.value = ' '
+            }
+
             function clean() {
                 var input = document.querySelector("input")
                 input.value = input.value.substring(0, input.value.length - 1)

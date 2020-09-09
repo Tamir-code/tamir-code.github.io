@@ -47,17 +47,27 @@
         </nav>
     </section>
     <div class="container">
-        <p>username:god1<br>password:123</p>
+        <input id="name">
+        <input id="password">
+        <button onclick="start()">Log in</button>
+        <p></p>
+        <p id="guide">name:god1<br>password:123</p>
     </div>
     <script>
         var username = "god1"
         var password = "123"
-        var username = prompt("username")
-        var password = prompt("password")
-        if (username == "god1" && password == "123") {
-            alert("logged in")
-        } else {
-            alert("can't log in")
+        var check = document.querySelector("p")
+
+        function start() {
+            var username = document.getElementById("name")
+            var password = document.getElementById("password")
+            if (username.value == "god1" && password.value == "123") {
+                check.innerHTML = "Logged in"
+            } else {
+                check.innerHTML = "Can't log in"
+            }
+            username.value = ' '
+            password.value = ' '
         }
     </script>
 </body>
