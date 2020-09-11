@@ -76,25 +76,29 @@
             <img src="img/2.jpg">
             <img src="img/3.jpg">
             <img src="img/4.jpg">
-
-
         </div>
     </div>
     <button onclick="changeLocation(-1)">Prev</button>
     <button onclick="changeLocation(1)">Next</button>
     <script>
         var slider = document.querySelector("#aa")
-        var i = 1
+        var i = 0
 
         function changeLocation(arg) {
             if (arg == -1) {
-                slider.style.left = -800 * i + "px"
+                slider.style.right = 800 * i + "px"
                 i--
                 console.log(i)
             } else if (arg == 1) {
                 slider.style.right = 800 * i + "px"
                 i++
                 console.log(i)
+            }
+
+            if (i == 3) {
+                i = 0
+            } else if (i == -1) {
+                i = 2
             }
         }
     </script>

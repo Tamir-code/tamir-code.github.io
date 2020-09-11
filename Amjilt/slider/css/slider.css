@@ -79,6 +79,7 @@
     margin: 0 auto;
     display: flex;
     position: relative;
+    transition: 1s;
 }
 
 #aa img {
