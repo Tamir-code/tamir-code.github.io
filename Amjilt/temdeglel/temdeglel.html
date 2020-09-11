@@ -63,18 +63,24 @@
 
         function plus() {
             var check = document.createElement("div")
+            var onePlan = document.createElement("div")
             var button = document.createElement("button")
+            onePlan.className = "onePlan"
             button.className = "hh"
-            button.innerHTML = "- "
+            button.innerHTML = "-"
             button.onclick = remove
             check.className = "check"
             check.innerHTML = input.value
-            plused.append(check, button)
+            onePlan.append(check, button)
+            plused.append(onePlan)
+
+
 
         }
 
         function remove() {
             event.path[1].remove()
+            console.log(event.path)
 
         }
     </script>
